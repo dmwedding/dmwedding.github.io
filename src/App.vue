@@ -3,11 +3,11 @@ import HelloWorld from './components/HelloWorld.vue';
 </script>
 
 <template>
-  <div className="flex flex-col gap-y-4 mx-4">
+  <div className="flex flex-col gap-y-4 m-4">
     <div class="flex flex-col items-center">
-      <p className="font-xl">Welcome to our Wedding</p>
-      <p className="font-xl">Meng</p>
-      <p className="font-xl">Da</p>
+      <p className="text-6xl font-bold wed">Welcome to our Wedding</p>
+      <p className="text-xl">Meng</p>
+      <p className="text-xl">Da</p>
     </div>
 
     <iframe
