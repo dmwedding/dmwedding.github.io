@@ -1,0 +1,27 @@
+{
+  "name": "dmwedding",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "homepage": "https://dmwedding.github.io/",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "@jaminearth/turn": "^1.0.1",
+    "vue": "^3.5.10"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.13",
+    "gh-pages": "^6.2.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.8"
+  }
+}
