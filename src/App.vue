@@ -1,9 +1,10 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue';
+import Welcome from './components/Welcome.vue';
 </script>
 
 <template>
-  <div className="flex flex-col gap-y-4 m-4">
+  <!-- <div className="flex flex-col gap-y-4 m-4">
     <div class="flex flex-col items-center">
       <p className="text-6xl font-bold wed">Welcome to our Wedding</p>
       <p className="text-xl">Meng</p>
@@ -25,5 +26,7 @@ import HelloWorld from './components/HelloWorld.vue';
     >
       Open in Map
     </a>
-  </div>
+  </div> -->
+
+  <Welcome />
 </template>
