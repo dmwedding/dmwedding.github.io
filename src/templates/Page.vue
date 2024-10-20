@@ -1,5 +1,5 @@
 <template>
-  <div class="relative h-screen">
+  <div class="relative h-dvh">
     <!-- Background with filter -->
     <div
       class="absolute inset-0 bg-cover bg-center filter"
@@ -11,47 +11,43 @@
 
     <!-- Content on top of the background -->
     <div
-      class="absolute inset-0 flex flex-row items-center justify-center text-white text-center"
+      class="absolute inset-0 flex flex-col items-center justify-center text-white text-center"
     >
-      <div class="flex flex-col flex-grow">
+      <div class="flex flex-col flex-grow items-center justify-center gap-2">
         <slot />
       </div>
 
       <!-- Arrow Icons for navigation -->
-      <div class="flex flex-col mr-3">
-        <button class="btn btn-circle mb-2">
+      <!-- <div class="flex flex-row pr-1">
+        <button class="btn btn-circle mb-2 btn-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor"
+            fill="currentColor"
+            class="size-6"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
+              fill-rule="evenodd"
+              d="M11.47 7.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z"
+              clip-rule="evenodd"
             />
           </svg>
         </button>
-        <button class="btn btn-circle">
+        <button class="btn btn-circle btn-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor"
+            fill="currentColor"
+            class="size-6"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
+              fill-rule="evenodd"
+              d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+              clip-rule="evenodd"
             />
           </svg>
         </button>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

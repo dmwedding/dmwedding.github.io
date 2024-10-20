@@ -1,6 +1,17 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue';
 import Welcome from './components/Welcome.vue';
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import 'swiper/css/pagination';
+
+// import required modules
+import { EffectCards, EffectCreative, Pagination } from 'swiper/modules';
+
+const modules = [EffectCards, EffectCreative, Pagination];
 </script>
 
 <template>
@@ -28,5 +39,34 @@ import Welcome from './components/Welcome.vue';
     </a>
   </div> -->
 
-  <Welcome />
+  <div class="h-[100dvh]">
+    <Swiper
+      :slides-per-view="1"
+      :spaceBetween="30"
+      :mousewheel="true"
+      :effect="'creative'"
+      :creativeEffect="{
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ['100%', 0, 0],
+        },
+      }"
+      :modules="modules"
+    >
+      <SwiperSlide>
+        <Welcome></Welcome>
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <Welcome></Welcome>
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <Welcome></Welcome>
+      </SwiperSlide>
+    </Swiper>
+  </div>
 </template>

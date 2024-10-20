@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-image: url('/img/welcome.jpg');
+  margin: 0;
+  padding: 0;
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -16,7 +22,30 @@
 }
 
 .wed {
-  font-family: 'Parisienne';
+  font-family: 'Rouge Script';
+  font-weight: bold;
+}
+
+
+.cover__icon-heart {
+  animation: heartbeat 1s infinite;
+  margin: 0 15px;
+  color: rgb(214, 69, 69);
+}
+
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* a {
