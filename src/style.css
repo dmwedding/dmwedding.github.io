@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rouge+Script&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,6 +8,8 @@ body {
   background-image: url('/img/welcome.jpg');
   margin: 0;
   padding: 0;
+  font-family: 'Dancing Script';
+  font-size: 22px;
 }
 
 :root {
@@ -24,6 +26,10 @@ body {
 .wed {
   font-family: 'Rouge Script';
   font-weight: bold;
+}
+
+.gold {
+  color: #c8ba7b;
 }
 
 
@@ -46,6 +52,10 @@ body {
   100% {
     transform: scale(1);
   }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #c8ba7b !important;
 }
 
 /* a {

@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import Page from '../templates/Page.vue';
+//gallery with dates
 </script>
 
 <template>
-  <Page bg="/img/welcome.jpg">
-    <p class="text-3xl italic wed gold">We're married!</p>
+  <Page bg="/img/gallery.jpg">
+    <p class="text-3xl italic wed gold">Gallery</p>
 
     <h1 class="text-7xl font-bold flex wed">
       <span>M</span>
