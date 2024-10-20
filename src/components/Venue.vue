@@ -64,48 +64,11 @@ onMounted(() => {
 onUnmounted(() => {
   clearInterval(interval);
 });
-
-const addToCalendar = () => {
-  const event = {
-    title: 'MD Wedding',
-    location: 'Koh Pich, Building J',
-    description: 'Wedding Event',
-    startDate: '20241208T170000',
-    endDate: '20241208T210000',
-  };
-
-  // Create the ICS file content
-  const icsContent = `
-BEGIN:VCALENDAR
-VERSION:2.0
-BEGIN:VEVENT
-SUMMARY:${event.title}
-DTSTART:${event.startDate}
-DTEND:${event.endDate}
-LOCATION:${event.location}
-DESCRIPTION:${event.description}
-END:VEVENT
-END:VCALENDAR
-      `.trim();
-
-  // Create a Blob from the string content
-  const blob = new Blob([icsContent], { type: 'text/calendar' });
-  const url = URL.createObjectURL(blob);
-
-  // Create a link element, trigger download, and remove it
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = 'MD_Wedding.ics';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-  URL.revokeObjectURL(url);
-};
 </script>
 
 <template>
   <Page bg="/img/venue.jpg">
-    <p class="text-3xl font-bold italic gold">Venue</p>
+    <p class="text-4xl font-bold italic gold wed">Venue</p>
 
     <p class="text-3xl font-bold italic">Koh Pich, Building J</p>
     <hr class="gold w-12" />

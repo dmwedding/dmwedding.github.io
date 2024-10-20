@@ -67,9 +67,9 @@ onUnmounted(() => {
 
 const addToCalendar = () => {
   const event = {
-    title: 'MD Wedding',
-    location: 'Koh Pich, Building J',
-    description: 'Wedding Event',
+    title: 'M❤️D Wedding',
+    location: 'https://maps.app.goo.gl/a2mVUUjDNyWpkbze7',
+    description: 'Koh Pich, Building J.',
     startDate: '20241208T170000',
     endDate: '20241208T210000',
   };
@@ -105,11 +105,27 @@ END:VCALENDAR
 
 <template>
   <Page bg="/img/date.jpg">
-    <p class="text-3xl font-bold italic gold">Date</p>
+    <p class="text-4xl font-bold italic gold wed">Date</p>
 
     <p class="text-3xl font-bold italic">08.12.2024</p>
 
-    <hr class="gold w-12" />
+    <hr class="gold w-12 my-4" />
+
+    <p class="text-4xl italic wed gold">Dress Code</p>
+
+    <div class="avatar-group space-x-2">
+      <div class="avatar placeholder border-none">
+        <div class="bg-[#ffa7a6] text-neutral-content w-8 rounded-full"></div>
+      </div>
+      <div class="avatar placeholder border-none">
+        <div class="bg-[#ffd7d7] text-neutral-content w-8 rounded-full"></div>
+      </div>
+      <div class="avatar placeholder border-none">
+        <div class="bg-[#faf3eb] text-neutral-content w-8 rounded-full"></div>
+      </div>
+    </div>
+
+    <hr class="gold w-12 my-4" />
 
     <div class="flex gap-2">
       <div>
