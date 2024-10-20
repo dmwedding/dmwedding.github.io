@@ -27,7 +27,7 @@ import Page from '../templates/Page.vue';
       <span>D</span>
     </h1>
 
-    <img src="/img/us-min.png" class="w-[37%] shadow-lg" />
+    <img src="/img/us-min.png" class="w-[200px] h-[300px] shadow-lg" />
 
     <p class="text-4xl italic wed">Be a part of our special day!</p>
 
