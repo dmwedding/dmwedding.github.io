@@ -30,7 +30,7 @@ const modules = [EffectCards, EffectCreative, Pagination, Mousewheel];
       :direction="'horizontal'"
       :pagination="true"
       :slides-per-view="1"
-      :spaceBetween="30"
+      :space-between="0"
       :effect="'creative'"
       :creativeEffect="{
         prev: {
@@ -43,25 +43,34 @@ const modules = [EffectCards, EffectCreative, Pagination, Mousewheel];
       }"
       :modules="modules"
     >
-      <SwiperSlide>
-        <Welcome></Welcome>
+      <SwiperSlide v-slot="{ isVisible, isNext, isPrev }">
+        <Welcome v-show="isVisible || isNext || isPrev"></Welcome>
       </SwiperSlide>
 
-      <SwiperSlide>
-        <Date></Date>
+      <SwiperSlide v-slot="{ isVisible, isNext, isPrev }">
+        <Date v-show="isVisible || isNext || isPrev"></Date>
       </SwiperSlide>
 
-      <SwiperSlide>
-        <Venue></Venue>
+      <SwiperSlide v-slot="{ isVisible, isNext, isPrev }">
+        <Venue v-show="isVisible || isNext || isPrev"></Venue>
       </SwiperSlide>
 
-      <SwiperSlide>
-        <Gallery></Gallery>
+      <SwiperSlide v-slot="{ isVisible, isNext, isPrev }">
+        <Gallery v-show="isVisible || isNext || isPrev"></Gallery>
       </SwiperSlide>
 
-      <SwiperSlide>
-        <Thank></Thank>
+      <SwiperSlide v-slot="{ isVisible, isNext, isPrev }">
+        <Thank v-show="isVisible || isNext || isPrev"></Thank>
       </SwiperSlide>
+
+      <template #container-end>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 48 48" ref="progressCircle">
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span ref="progressContent"></span>
+        </div>
+      </template>
     </Swiper>
   </div>
 </template>
