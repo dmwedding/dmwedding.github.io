@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 // import required modules
 import {

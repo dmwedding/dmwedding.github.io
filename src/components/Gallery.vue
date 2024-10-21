@@ -1,12 +1,17 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import Page from '../templates/Page.vue';
 import Heart from './Heart.vue';
 import HeartStatic from './HeartStatic.vue';
+
+onMounted(() => {
+  console.log(1);
+});
 </script>
 
 <template>
   <Page bg="/img/gallery.jpg">
-    <p class="text-4xl italic wed gold">Our Story</p>
+    <p class="text-5xl italic wed gold">Our Story</p>
 
     <ul class="timeline timeline-vertical">
       <li>
@@ -36,7 +41,7 @@ import HeartStatic from './HeartStatic.vue';
         <hr class="bg-primary" />
         <div class="timeline-start timeline-box bg-transparent border-none">
           <span class="gold">2017</span>
-          <img src="/img/2017.jpg" alt="2017" class="h-[75px] rounded-lg" />
+          <img src="/img/2017.jpg" alt="2017" class="h-[60px] rounded-lg" />
         </div>
         <div class="timeline-middle">
           <HeartStatic></HeartStatic>

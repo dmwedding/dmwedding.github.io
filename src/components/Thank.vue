@@ -5,7 +5,7 @@ import Heart from './Heart.vue';
 
 <template>
   <Page bg="/img/thank.jpg">
-    <p class="text-3xl italic wed gold">We are expecting you!</p>
+    <p class="text-3xl italic wed gold">We're expecting you!</p>
 
     <h1 class="text-7xl font-bold flex wed">
       <span>M</span>

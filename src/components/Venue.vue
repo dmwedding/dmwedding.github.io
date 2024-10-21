@@ -68,7 +68,7 @@ onUnmounted(() => {
 
 <template>
   <Page bg="/img/venue.jpg">
-    <p class="text-4xl font-bold italic gold wed">Venue</p>
+    <p class="text-5xl font-bold italic gold wed">Venue</p>
 
     <p class="text-3xl font-bold italic">Koh Pich, Building J</p>
     <hr class="gold w-12" />

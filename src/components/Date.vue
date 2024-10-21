@@ -105,7 +105,7 @@ END:VCALENDAR
 
 <template>
   <Page bg="/img/date.jpg">
-    <p class="text-4xl font-bold italic gold wed">Date</p>
+    <p class="text-5xl font-bold italic gold wed">Date</p>
 
     <p class="text-3xl font-bold italic">08.12.2024</p>
 
