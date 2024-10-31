@@ -11,7 +11,7 @@ onMounted(() => {
 
 <template>
   <Page bg="/img/gallery.jpg">
-    <p class="text-5xl italic wed gold">Our Story</p>
+    <p class="text-5xl italic wed gold">Our Love Story</p>
 
     <ul class="timeline timeline-vertical">
       <li>
