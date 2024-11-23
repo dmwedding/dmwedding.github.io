@@ -1,12 +1,7 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import Page from '../templates/Page.vue';
 import Heart from './Heart.vue';
 import HeartStatic from './HeartStatic.vue';
-
-onMounted(() => {
-  console.log(1);
-});
 </script>
 
 <template>

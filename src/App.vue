@@ -20,11 +20,37 @@ import Venue from './components/Venue.vue';
 import Date from './components/Date.vue';
 import Thank from './components/Thank.vue';
 import Gallery from './components/Gallery.vue';
+import { ref } from 'vue';
 
 const modules = [EffectCards, EffectCreative, Pagination, Mousewheel];
+
+const song = ref();
+
+window.addEventListener(
+  'mouseclick',
+  () => {
+    console.log('function');
+
+    song.value.play();
+  },
+  { once: true }
+);
+
+const onSlideChange = () => {
+  if (!song.value.paused) {
+    return;
+  }
+
+  song.value.play();
+};
 </script>
 
 <template>
+  <audio ref="song" loop>
+    <source src="/songs/beautiful_in_white.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+
   <div class="h-[100dvh]">
     <Swiper
       :direction="'horizontal'"
@@ -42,6 +68,7 @@ const modules = [EffectCards, EffectCreative, Pagination, Mousewheel];
         },
       }"
       :modules="modules"
+      @slideChange="onSlideChange"
     >
       <SwiperSlide v-slot="{ isVisible, isNext, isPrev }">
         <Welcome v-show="isVisible || isNext || isPrev"></Welcome>
