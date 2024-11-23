@@ -29,7 +29,9 @@ const song = ref();
 window.addEventListener(
   'mouseclick',
   () => {
-    console.log('function');
+    if (!song.value.paused) {
+      return;
+    }
 
     song.value.play();
   },
@@ -43,6 +45,14 @@ const onSlideChange = () => {
 
   song.value.play();
 };
+
+document.addEventListener('visibilitychange', function (ev) {
+  if (ev.target.hidden) {
+    song.value?.pause();
+  } else {
+    song.value?.play();
+  }
+});
 </script>
 
 <template>
