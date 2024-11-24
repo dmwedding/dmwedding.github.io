@@ -29,21 +29,21 @@ const song = ref();
 window.addEventListener(
   'mouseclick',
   () => {
-    if (!song.value.paused) {
+    if (!song.value?.paused) {
       return;
     }
 
-    song.value.play();
+    song.value?.play();
   },
   { once: true }
 );
 
 const onSlideChange = () => {
-  if (!song.value.paused) {
+  if (!song.value?.paused) {
     return;
   }
 
-  song.value.play();
+  song.value?.play();
 };
 
 document.addEventListener('visibilitychange', function (ev) {
@@ -56,7 +56,7 @@ document.addEventListener('visibilitychange', function (ev) {
 </script>
 
 <template>
-  <audio ref="song" loop>
+  <audio ref="song" loop preload>
     <source src="/songs/beautiful_in_white.mp3" type="audio/mp3" />
     Your browser does not support the audio element.
   </audio>
